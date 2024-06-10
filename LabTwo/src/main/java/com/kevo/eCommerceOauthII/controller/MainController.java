@@ -30,7 +30,7 @@ public class MainController {
             System.out.println(oAuth2User);
             String email = oAuth2User.getAttribute("email");
             String name = oAuth2User.getAttribute("name");
-            return "Welcome " + name + " from ";
+            return "Welcome " + name + " from " + email;
         }
         return "Welcome from private router";
     }
