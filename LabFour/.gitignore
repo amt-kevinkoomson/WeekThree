@@ -1,0 +1,5 @@
+users/.env
+products/.env
+gateway/.env
+config/.env
+eurekaServer/.env
