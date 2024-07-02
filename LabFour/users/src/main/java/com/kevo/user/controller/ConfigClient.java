@@ -1,6 +1,7 @@
 package com.kevo.user.controller;
 
 import com.netflix.discovery.EurekaClient;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
@@ -11,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequiredArgsConstructor
 public class ConfigClient {
 
     @Value("${user.role}")
     private String role;
 
-    @Autowired
     @Lazy
     private EurekaClient eurekaClient;
 
